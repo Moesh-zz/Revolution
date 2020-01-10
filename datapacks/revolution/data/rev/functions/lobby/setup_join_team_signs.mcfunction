@@ -1,0 +1,2 @@
+data merge block 211 100 217 {Text1: '{"text":"Join or leave","clickEvent":{"action":"run_command","value":"/trigger teamSelected set 1"}}',Text2: '{"translate":"the %s team","with":[{"text":"Red","color":"red"}]}',Text3: '{"text":"---"}',Text4: '{"text":"[Right-click]"}'}
+data merge block 211 100 171 {Text1: '{"text":"Join or leave","clickEvent":{"action":"run_command","value":"/trigger teamSelected set 2"}}',Text2: '{"translate":"the %s team","with":[{"text":"Blue","color":"blue"}]}',Text3: '{"text":"---"}',Text4: '{"text":"[Right-click]"}'}
