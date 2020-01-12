@@ -1,3 +1,11 @@
+#---------------------------------------------------------------------------------------------------
+# Purpose: Clone blocks from region 3,3 ()
+
+# Region 0,0 spawnpoint: 203 99 194
+# Region 3,3 spawnpoint: 1571 99 1630
+# All physical changes to the map below yLevel 128 (under the barrier blocks) should be made in the
+# Region 3,3 location. All of these blocks will be cloned back to region 0,0.
+#---------------------------------------------------------------------------------------------------
 # Load region 3,3 (roughly)
 forceload add 1585 1574 1734 1687
 
