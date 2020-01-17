@@ -1,10 +1,3 @@
-# GLOSSERY
-# camalCase = Indicates a scoreboard objective
-# PascalCase = A fake player holding a variable
-# CAPITALS = A fake player holding constant on the CONST scoreboard
-
-#tag @a remove Registered
-
 #---------------------------------------------------------------------------------------------------
 # Purpose: Set-up teams
 #---------------------------------------------------------------------------------------------------
