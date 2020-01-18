@@ -1,6 +1,7 @@
 function rev:reset/clone_blocks
 
 # Spawn Rupert villager
+kill @e[type=villager]
 summon minecraft:villager 217 100 194
 
 
