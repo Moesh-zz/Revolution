@@ -13,7 +13,7 @@ execute if score GameState gameVariable matches 0 run function rev:lobby/check_r
 execute as @a at @s if score GameState gameVariable matches 0 run function rev:lobby/out_of_bounds
 
 # I honestly don't care if people die of hunger while in the lobby. If the lobby times goes so long
-# that people are dying of hunger, perhaps they start the game already!
+# that people are dying of hunger, perhaps they should start the game already!
 #execute if score GameState gameVariable matches 0 run effect give @a minecraft:saturation 3 10 true
 
 #---------------------------------------------------------------------------------------------------
