@@ -1,5 +1,5 @@
 tellraw @a {"translate":">>> %s","color":"white","with":[{"text":"The match is over.","color":"green"}]}
-playsound minecraft:event.raid.horn master @a 217 100 195 999999
+playsound minecraft:event.raid.horn master @a 217 100 195 999999 0.75
 
 gamemode spectator @a
 
