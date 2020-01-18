@@ -54,6 +54,9 @@ scoreboard players set @a deaths 0
 spawnpoint @a[team=blue] 214 99 175
 spawnpoint @a[team=red] 214 99 213
 
+tp @a[team=blue] 214 99 175
+tp @a[team=red] 214 99 213
+
 # Lower red gates
 fill 215 97 210 215 97 217 minecraft:stone
 # Lower blue gates
