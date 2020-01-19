@@ -6,6 +6,9 @@
 # All physical changes to the map below yLevel 128 (under the barrier blocks) should be made in the
 # Region 3,3 location. All of these blocks will be cloned back to region 0,0.
 #---------------------------------------------------------------------------------------------------
+# Advise all players the map is being reset.
+tellraw @a {"translate":"%s The map is being reset. This will cause some lag...","color":"green","with":[{"text":">>>","color":"white"}]}
+
 # Load region 3,3 (roughly)
 forceload add 1585 1574 1734 1687
 
@@ -63,3 +66,5 @@ clone 1729 81 1574 1734 127 1687 361 81 138
 
 # Unload chunks to clean up
 forceload remove all
+
+tellraw @a {"translate":"%s Map reset.","color":"green","with":[{"text":">>>","color":"white"}]}
