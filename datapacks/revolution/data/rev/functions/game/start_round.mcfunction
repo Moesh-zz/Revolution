@@ -48,6 +48,9 @@ execute as @e[type=!player,type=!villager] run kill @s
 scoreboard players set @a kills 0
 scoreboard players set @a deaths 0
 
+# If a player used a legacy reset, let's ensure they can no longer do this during the game!
+scoreboard players reset * reset
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Let them out!
 #---------------------------------------------------------------------------------------------------

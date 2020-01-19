@@ -5,8 +5,8 @@ xp set @s 0 levels
 xp set @s 0 points
 
 tp @s 203 99 194 -90 0 
+gamemode adventure @s
 spawnpoint @s 203 99 194
-
 
 bossbar set minecraft:blue players @a
 bossbar set minecraft:red players @a
