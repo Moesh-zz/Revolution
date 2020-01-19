@@ -1,6 +1,8 @@
 clear @s
 effect clear @s
-effect give @s minecraft:absorption 3 4 true
+effect give @s minecraft:absorption 3 4 false
+effect give @s minecraft:instant_health 3 10 true
+effect give @s minecraft:saturation 5 10 true
 xp set @s 0 levels
 xp set @s 0 points
 
