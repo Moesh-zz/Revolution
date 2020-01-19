@@ -180,4 +180,4 @@ kill @e[type=!player,type=!villager]
 #---------------------------------------------------------------------------------------------------
 tag @a remove Registered
 
-tellraw @a {"text":"Reloaded the Revolution datapack","color":"green"}
+tellraw @a {"text":"The stage has been set.","color":"light_purple"}
