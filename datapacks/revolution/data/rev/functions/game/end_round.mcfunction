@@ -7,6 +7,10 @@ gamemode spectator @a
 # I suppose I can use later use this to make a cool reset thing. (Spoiler alert: I did.)
 scoreboard players set GameState gameVariable 2
 
+execute store result score MatchID gameVariable run time query gametime
+scoreboard players operation @a[team=red] matchID = MatchID gameVariable
+scoreboard players operation @a[team=blue] matchID = MatchID gameVariable
+
 # A bit of a hacky way to enable a map reset for all players.
 # This method also allows me to do a legacy reset, allowing players to play the map without resetting
 # the terrain. You know, for the sickos out there.

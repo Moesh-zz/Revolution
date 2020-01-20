@@ -57,6 +57,14 @@ scoreboard objectives add teamSelected trigger
 scoreboard objectives remove yCoord
 scoreboard objectives add yCoord dummy
 
+# Players may disconnect and reconnect during matches, let's ensure they're in the right match.
+scoreboard objectives remove matchID
+scoreboard objectives add matchID dummy
+
+# Player left game
+scoreboard objectives remove leaveGame
+scoreboard objectives add leaveGame minecraft.custom:minecraft.leave_game
+
 # Health! Show below names!
 scoreboard objectives remove health
 scoreboard objectives add health health {"text":"❤","color":"red"}

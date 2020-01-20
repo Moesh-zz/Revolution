@@ -43,6 +43,12 @@ scoreboard players operation Red objectiveTime = ObjectiveMax gameVariable
 # If a player used a legacy reset, let's ensure they can no longer do this during the game!
 scoreboard players reset * reset
 
+# Purpose: Establish a SessionID by using gametime
+
+execute store result score MatchID gameVariable run time query gametime
+scoreboard players operation @a[team=red] matchID = MatchID gameVariable
+scoreboard players operation @a[team=blue] matchID = MatchID gameVariable
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Let them out!
 #---------------------------------------------------------------------------------------------------

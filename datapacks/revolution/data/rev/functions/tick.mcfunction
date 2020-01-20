@@ -3,6 +3,7 @@
 #---------------------------------------------------------------------------------------------------
 # Any function here usually has it's own handling for lobby time and match time.
 execute as @a[tag=!Registered] run function rev:player/register
+execute as @a[scores={leaveGame=1..}] at @s run function rev:player/left_game
 
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the lobby stage
