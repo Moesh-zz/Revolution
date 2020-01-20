@@ -17,7 +17,7 @@ gamemode survival @s[gamemode=adventure]
 # This player is at the edge of the playable area, put them in adventure mode!
 execute if block ~ 1 ~ minecraft:barrier if entity @s[y=81,dy=45] run tag @s add AtEdge
 title @s[gamemode=survival,tag=AtEdge] actionbar {"text":"Out of bounds","color":"red"}
-gamemode adventure @s[gamemode=survival,tag=AtEdge]
+gamemode adventure @s[gamemode=survival,tag=!InBounds]
 
 # This player is in the game, and has entered the lobby outside of their spawn zone. Let's take
 # everything from them for trying to enter a forbidden zone and reset their spawnpoint in case
