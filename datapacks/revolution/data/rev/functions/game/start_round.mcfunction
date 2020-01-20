@@ -1,20 +1,8 @@
 #---------------------------------------------------------------------------------------------------
 # Purpose: Reset the map and player states to neutral
 #---------------------------------------------------------------------------------------------------
-# Run on all players
-effect clear @a
-clear @a
-effect give @a minecraft:regeneration 5 10
-effect give @a minecraft:saturation 5 10
-
-# Send tellraw BEFORE changing any game modes!
-tellraw @a {"translate":"%s VIVA LA REVOLUTION!","color":"green","with":[{"text":">>>","color":"white"}]}
-playsound minecraft:event.raid.horn master @a 217 100 195 999999
-
-# Set gamemodes
-gamemode spectator @a[team=]
-gamemode survival @a[team=red]
-gamemode survival @a[team=blue]
+scoreboard players operation Blue objectiveTime = ObjectiveMax gameVariable
+scoreboard players operation Red objectiveTime = ObjectiveMax gameVariable
 
 # Set map rules
 difficulty normal
@@ -45,8 +33,12 @@ bossbar set minecraft:red players @a
 execute as @e[type=!player,type=!villager] run tp ~ 0 ~
 execute as @e[type=!player,type=!villager] run kill @s
 
+scoreboard players reset @a[team=] kills
 scoreboard players set @a kills 0
 scoreboard players set @a deaths 0
+
+scoreboard players operation Blue objectiveTime = ObjectiveMax gameVariable
+scoreboard players operation Red objectiveTime = ObjectiveMax gameVariable
 
 # If a player used a legacy reset, let's ensure they can no longer do this during the game!
 scoreboard players reset * reset
@@ -68,6 +60,22 @@ fill 215 97 171 215 97 178 minecraft:stone
 # Get rid of levers to prevent recursion on game end
 setblock 214 100 217 minecraft:air
 setblock 214 100 171 minecraft:air
+
+
+# Run on all players
+effect clear @a
+clear @a
+effect give @a minecraft:regeneration 5 10
+effect give @a minecraft:saturation 5 10
+
+# Send tellraw BEFORE changing any game modes!
+tellraw @a {"translate":"%s VIVA LA REVOLUTION!","color":"green","with":[{"text":">>>","color":"white"}]}
+playsound minecraft:event.raid.horn master @a 217 100 195 999999
+
+# Set gamemodes
+gamemode spectator @a[team=]
+gamemode survival @a[team=red]
+gamemode survival @a[team=blue]
 
 # Block off spawn so players can't escape into the lobby
 # I struggled making the decision to add a bunch of bedrock to the spawn location. I eventually
