@@ -20,7 +20,7 @@ execute as @a at @s if score GameState gameVariable matches 0 run function rev:l
 # Purpose: Tick these functions during the match
 #---------------------------------------------------------------------------------------------------
 execute if score GameState gameVariable matches 1 run function rev:game/objective/check_levers
-execute if score GameState gameVariable matches 1 run function rev:game/objective/protect_lever_and_clear_blocks
+execute if score GameState gameVariable matches 1 run function rev:game/objective/protect_room
 execute as @a at @s unless entity @s[gamemode=spectator] if score GameState gameVariable matches 1 run function rev:game/out_of_bounds
 
 #---------------------------------------------------------------------------------------------------
