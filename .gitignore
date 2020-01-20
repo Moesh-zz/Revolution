@@ -1,7 +1,9 @@
 
 advancements/
 
-data/
+DIM-1/
+
+DIM1/
 
 level.dat_old
 
@@ -34,3 +36,9 @@ region/r.3.2.mca
 session.lock
 
 stats/
+
+data/chunks.dat
+
+data/raids.dat
+
+data/scoreboard.dat
