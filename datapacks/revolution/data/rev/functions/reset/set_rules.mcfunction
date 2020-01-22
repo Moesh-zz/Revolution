@@ -68,6 +68,9 @@ bossbar add red {"text":"Red","color":"red"}
 	execute store result bossbar minecraft:red max run scoreboard players get #InSeconds gameVariable
 	execute store result bossbar minecraft:red value run scoreboard players get #InSeconds gameVariable
 
+scoreboard players set BlueReady gameVariable 0
+scoreboard players set RedReady gameVariable 0
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: Run follow-up functions to handle players currently in-game
 #---------------------------------------------------------------------------------------------------

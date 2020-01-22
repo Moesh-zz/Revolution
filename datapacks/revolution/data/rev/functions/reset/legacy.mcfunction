@@ -1,8 +1,8 @@
 #---------------------------------------------------------------------------------------------------
 # Purpose: Allow players to start the map again without resetting anything.
 #---------------------------------------------------------------------------------------------------
-function rev:reset/set_rules
 function rev:reset/set_important_blocks
+function rev:reset/set_rules
 schedule function rev:reset/clear_entities 1t
 
 # A bit of a hacky way to enable a map reset for all players.
