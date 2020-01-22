@@ -17,3 +17,4 @@ scoreboard players operation @a[team=blue] matchID = MatchID gameVariable
 tellraw @a {"translate":"Thanks for playing! Use [%s] to play again.","color":"green","with":[{"text":"/trigger reset set 1","color":"white"}]}
 scoreboard players set @a reset 0
 scoreboard players enable @a reset
+scoreboard players reset @a gg

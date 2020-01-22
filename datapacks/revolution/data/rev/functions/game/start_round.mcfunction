@@ -102,6 +102,9 @@ fill 214 102 210 213 102 217 minecraft:bedrock
 scoreboard players reset @a teamSelected
 scoreboard players reset @a reset
 
+scoreboard players enable @a gg
+scoreboard players set @a gg 0
+
 #---------------------------------------------------------------------------------------------------
 # Purpose: The game is now in progress, update the variable
 #---------------------------------------------------------------------------------------------------

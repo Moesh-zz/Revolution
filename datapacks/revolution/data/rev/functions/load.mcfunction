@@ -65,6 +65,10 @@ scoreboard objectives add matchID dummy
 scoreboard objectives remove leaveGame
 scoreboard objectives add leaveGame minecraft.custom:minecraft.leave_game
 
+# GG
+scoreboard objectives remove gg
+scoreboard objectives add gg trigger
+
 # Health! Show below names!
 scoreboard objectives remove health
 scoreboard objectives add health health {"text":"❤","color":"red"}
