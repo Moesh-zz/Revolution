@@ -78,6 +78,7 @@ tag @a remove Registered
 team leave @a
 
 scoreboard players set GameState gameVariable 0
+scoreboard players reset @a reset
 
 # Submitted for the approval of the Midnight Society...
 time set midnight
