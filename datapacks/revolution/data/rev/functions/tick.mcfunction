@@ -28,5 +28,5 @@ execute as @a at @s unless entity @s[gamemode=spectator] if score GameState game
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions after the match
 #---------------------------------------------------------------------------------------------------
-execute if score GameState gameVariable matches 2 if entity @a[scores={reset=..32}] run function rev:reset
+scoreboard players set @a[scores={reset=..-1}] reset 1
 execute if score GameState gameVariable matches 2 if entity @a[scores={reset=33}] run function rev:reset/legacy

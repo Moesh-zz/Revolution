@@ -40,5 +40,6 @@ tag @a[tag=JoinBlue] remove JoinBlue
 tag @a[tag=JoinRed] remove JoinRed
 tag @a[tag=Spectate] remove Spectate
 tag @a[tag=LeaveTeam] remove LeaveTeam
+scoreboard players set @a[scores={teamSelected=..-1}] teamSelected 0
 scoreboard players set @a[scores={teamSelected=1..}] teamSelected 0
 scoreboard players enable @a teamSelected
