@@ -10,7 +10,7 @@
 tellraw @a {"translate":"%s The map is being reset. This will cause some lag...","color":"green","with":[{"text":">>>","color":"white"}]}
 
 # Load region 3,3 (roughly)
-forceload add 1585 1574 1734 1687
+forceload add 1541 1574 1734 1687
 
 # Clone from region 3,3 to region 0,0
 clone 1541 81 1574 1546 127 1687 173 81 138
