@@ -20,9 +20,18 @@ execute as @a at @s if score GameState gameVariable matches 0 run function rev:l
 #---------------------------------------------------------------------------------------------------
 # Purpose: Tick these functions during the match
 #---------------------------------------------------------------------------------------------------
-execute if score GameState gameVariable matches 1 if entity @a[scores={gg=1..}] run function rev:game/gg
-execute if score GameState gameVariable matches 1 run function rev:game/objective/check_levers
+# Let players run a GG command to end a game early
+# This next line is essentially protection of players against themselves. They can use
+# /trigger set gg 0, therefore disabling the gg trigger for themselves. 
+execute if score GameState gameVariable matches 1 run scoreboard players enable @a[scores={gg=..0}] gg
+execute if score GameState gameVariable matches 1 run scoreboard players set @a[scores={gg=..0}] gg 0
+execute if entity @a[scores={gg=1..}] if score GameState gameVariable matches 1 run function rev:game/gg
+
+# Ensure no blocks have been placed in the room and that the lever is still intact.
 execute if score GameState gameVariable matches 1 run function rev:game/objective/protect_room
+execute if score GameState gameVariable matches 1 run function rev:game/objective/check_levers
+
+# 
 execute as @a at @s unless entity @s[gamemode=spectator] if score GameState gameVariable matches 1 run function rev:game/out_of_bounds
 
 #---------------------------------------------------------------------------------------------------
